@@ -1,0 +1,78 @@
+# Social Media Post Generator Project Structure
+
+social_media_generator/
+├── requirements.txt
+├── config.py
+├── .env
+├── .gitignore
+├── README.md
+├── app.py                          # Streamlit frontend
+├── backend/
+│   ├── __init__.py
+│   ├── agents/
+│   │   ├── __init__.py
+│   │   ├── dalle_agent.py
+│   │   ├── content_strategist.py
+│   │   ├── copywriter_agent.py
+│   │   ├── visual_director.py
+│   │   ├── platform_optimizer.py
+│   │   └── analyzer_agent.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── post_generator.py
+│   │   └── helpers.py
+│   └── utils/
+│       ├── __init__.py
+│       ├── config.py
+│       └── constants.py
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   └── images/
+│       └── logo.png
+└── outputs/
+    ├── images/
+    └── posts/
+
+## Requirements (requirements.txt)
+streamlit>=1.28.0
+autogen-agentchat[lmm]~=0.2
+diskcache>=5.6.1
+openai>=1.3.0
+matplotlib>=3.7.0
+pillow>=10.0.0
+termcolor>=2.3.0
+python-dotenv>=1.0.0
+plotly>=5.17.0
+pandas>=2.0.0
+requests>=2.31.0
+
+## Environment Variables (.env)
+OPENAI_API_KEY=your_openai_api_key_here
+
+## .gitignore
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.cache/
+outputs/
+*.log
+.streamlit/
